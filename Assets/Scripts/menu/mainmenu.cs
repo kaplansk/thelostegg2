@@ -6,5 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class mainmenu : MonoBehaviour
 {
-    public void 
+    public void Play()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+    public void Quit()
+    {
+        Application.Quit();
+        Debug.Log("Oyundan Çýkýþ Yapýlýyor");
+    } 
 }
