@@ -21,14 +21,14 @@ public class CharacterController : MonoBehaviour
     private void FixedUpdate()
     {
         PlayerMovement();
-       
-
+        PlayerSlowMotion();
     }
 
     private void Update()
     {
-       PlayerInput();
+        PlayerInput();
         PlayerJump();
+    
     }
     private void PlayerInput()
     {
@@ -65,6 +65,19 @@ public class CharacterController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && _isGrounded == true)
             _playerRigidBody.AddForce(Vector3.up * playerJumpSpeed, ForceMode.Impulse);
+    }
+
+    private void PlayerSlowMotion()
+    {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            Time.timeScale = 0.5f;
+            
+        }
+        else
+        {
+            Time.timeScale = 1f;
+        }
     }
 
     private void OnDisable()

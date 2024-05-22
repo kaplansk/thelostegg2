@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - CheckPoint1
+  - CheckPoint3
+  - CheckPoint2
   layers:
   - Default
   - TransparentFX
