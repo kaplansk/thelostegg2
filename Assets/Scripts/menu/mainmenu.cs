@@ -1,15 +1,30 @@
+
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
 public class mainmenu : MonoBehaviour
 {
+
+    [SerializeField] private GameObject loadingScreen;
+    [SerializeField] private GameObject mainMenu;
+
+  
+
     public void Play()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        mainMenu.SetActive(false);
+        loadingScreen.SetActive(true);
+
+       
     }
+
+   
+
+
+
+
     public void Quit()
     {
         Application.Quit();
